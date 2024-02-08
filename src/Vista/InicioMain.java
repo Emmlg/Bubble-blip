@@ -5,17 +5,30 @@
  */
 package Vista;
 
+import Tipografias.Fuentes;
+import static java.awt.GridBagConstraints.BOTH;
+
 /**
  *
  * @author EMmanuel
  */
+
+
 public class InicioMain extends javax.swing.JFrame {
 
     /**
      * Creates new form InicioMain
      */
+    Fuentes tipoFuente;
     public InicioMain() {
         initComponents();
+        //this.setExtendedState(this.MAXIMIZED_BOTH);
+        tipoFuente= new Fuentes();
+        jLNombreJuego.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 83));
+        //jLTBienvenida.setFont(tipoFuente.fuente(tipoFuente.CLEAR, 1, 45));
+        jLCargando.setFont(tipoFuente.fuente(tipoFuente.NINE, 1, 45));
+        
+        
     }
 
     /**
@@ -27,18 +40,37 @@ public class InicioMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLNombreJuego = new javax.swing.JLabel();
+        jLTBienvenida = new javax.swing.JLabel();
+        jLCargando = new javax.swing.JLabel();
+        jProgressBar1 = new javax.swing.JProgressBar();
+        jLabel2 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLNombreJuego.setBackground(new java.awt.Color(153, 0, 102));
+        jLNombreJuego.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 80)); // NOI18N
+        jLNombreJuego.setForeground(new java.awt.Color(255, 255, 255));
+        jLNombreJuego.setText("BUBBLE-BLIP");
+        getContentPane().add(jLNombreJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, -1, -1));
+
+        jLTBienvenida.setFont(new java.awt.Font("Consolas", 0, 40)); // NOI18N
+        jLTBienvenida.setForeground(new java.awt.Color(255, 255, 255));
+        jLTBienvenida.setText("BIENVENIDO A");
+        getContentPane().add(jLTBienvenida, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, -1, -1));
+
+        jLCargando.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLCargando.setForeground(new java.awt.Color(255, 255, 255));
+        jLCargando.setText("CARGANDO......");
+        getContentPane().add(jLCargando, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, -1, -1));
+
+        jProgressBar1.setBackground(new java.awt.Color(41, 245, 226));
+        jProgressBar1.setForeground(new java.awt.Color(41, 245, 226));
+        getContentPane().add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 380, 40));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Inicializaciòn800x457.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,5 +111,10 @@ public class InicioMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLCargando;
+    private javax.swing.JLabel jLNombreJuego;
+    private javax.swing.JLabel jLTBienvenida;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JProgressBar jProgressBar1;
     // End of variables declaration//GEN-END:variables
 }
