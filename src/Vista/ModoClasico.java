@@ -108,6 +108,7 @@ public class ModoClasico extends javax.swing.JFrame {
         getContentPane().add(LFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 457));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void BLetraMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BLetraMenuActionPerformed

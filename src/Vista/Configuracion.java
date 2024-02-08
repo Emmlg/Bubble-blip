@@ -86,6 +86,7 @@ public class Configuracion extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 457));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void BCantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BCantidadActionPerformed

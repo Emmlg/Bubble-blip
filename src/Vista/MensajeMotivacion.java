@@ -61,6 +61,7 @@ public class MensajeMotivacion extends javax.swing.JFrame {
         getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 197));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
