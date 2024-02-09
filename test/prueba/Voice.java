@@ -16,18 +16,19 @@ public class Voice {
     public static void main(String[] args) {
         
 
-//           System.setProperty("freetts.voices",
-//                "com.sun.speech.freetts.en.us.cmu_time_awb.AlanVoiceDirectory");
-        
         System.setProperty("freetts.voices",
-               "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
+               "com.sun.speech.freetts.en.us.cmu_time_awb.AlanVoiceDirectory");
+        
+     //   System.setProperty("freetts.voices",
+      //         "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
 //        
     VoiceManager manager = VoiceManager.getInstance();
-   //  com.sun.speech.freetts.Voice voice = manager.getVoice("alan");
-        com.sun.speech.freetts.Voice voice = manager.getVoice("kevin16");
+    
+    com.sun.speech.freetts.Voice voice = manager.getVoice("alan");
+   //    com.sun.speech.freetts.Voice voice = manager.getVoice("kevin16");
 
-     com.sun.speech.freetts.Voice []voicelist = VoiceManager.getInstance().getVoices();
-          
+    com.sun.speech.freetts.Voice []voicelist = VoiceManager.getInstance().getVoices();
+     
         for(int i=0;i<voicelist.length;i++){
         
             System.out.println("#voice "+voicelist[i].getName());
@@ -49,10 +50,7 @@ public class Voice {
             System.out.println("error of getting voice");
         }
  
-    
-    
-    
-    
+ 
     
         }
     

@@ -5,35 +5,37 @@
  */
 package Controlador;
 
+import Modelo.VoiceClass;
 
-import Modelo.EnglishVoice;
+
+
 
 /**
  *
  * @author EMmanuel
  */
 public class ControllEnglishVoice {
-    public EnglishVoice g;
-   
+
+    VoiceClass voice ;
     
-    public void sdf(String word) throws InterruptedException{
-        g.say2Times(word);
-    }
-    
-    
- 
-    
-    
-    public static void main(String[] args) throws InterruptedException {
-        
-         EnglishVoice gh = new EnglishVoice();
-         
-         gh.sayword("hola");
-         gh.say2Times("hola");
-         
-      
+    public ControllEnglishVoice() {
+        voice  = new VoiceClass();
         
     }
+    
+    public boolean sayWord(String word) {
+        
+        
+     return voice.speakW(word);
+        
+    }
+    public boolean say2Times(String word) throws InterruptedException {
+        
+        
+     return voice.say2Times(word);
+        
+    }
+
     
      
     
