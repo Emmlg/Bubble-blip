@@ -42,6 +42,7 @@ public class ModoRetoMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jProgressBar1 = new javax.swing.JProgressBar();
         jLInstruccion1 = new javax.swing.JLabel();
@@ -57,20 +58,21 @@ public class ModoRetoMain extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/corazonT50x50.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 50, 50));
-        getContentPane().add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 170, 20));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 50, 50));
+        jPanel1.add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 170, 20));
 
         jLInstruccion1.setForeground(new java.awt.Color(0, 74, 173));
         jLInstruccion1.setText("Traduce la palabra");
-        getContentPane().add(jLInstruccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 50, 170, -1));
+        jPanel1.add(jLInstruccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 50, 170, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/BPausa60x60.png"))); // NOI18N
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 90, 80));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 90, 80));
 
         BotonSalir.setBackground(new java.awt.Color(255, 255, 255));
         BotonSalir.setForeground(new java.awt.Color(31, 19, 71));
@@ -85,7 +87,7 @@ public class ModoRetoMain extends javax.swing.JFrame {
                 BotonSalirActionPerformed(evt);
             }
         });
-        getContentPane().add(BotonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 140, 50));
+        jPanel1.add(BotonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 140, 50));
 
         BotonMenu.setForeground(new java.awt.Color(31, 19, 71));
         BotonMenu.setText("MENÚ");
@@ -96,8 +98,8 @@ public class ModoRetoMain extends javax.swing.JFrame {
                 BotonMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(BotonMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, 140, 50));
-        getContentPane().add(jLMensajeError, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 390, 280, 30));
+        jPanel1.add(BotonMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, 140, 50));
+        jPanel1.add(jLMensajeError, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 390, 280, 30));
 
         jTxtEscribir.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
         jTxtEscribir.setBorder(null);
@@ -106,24 +108,35 @@ public class ModoRetoMain extends javax.swing.JFrame {
                 jTxtEscribirActionPerformed(evt);
             }
         });
-        getContentPane().add(jTxtEscribir, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 330, 220, 40));
+        jPanel1.add(jTxtEscribir, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 330, 220, 40));
 
         jLInstruccion2.setForeground(new java.awt.Color(0, 74, 173));
         jLInstruccion2.setText("del meteorito");
-        getContentPane().add(jLInstruccion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 70, -1, -1));
+        jPanel1.add(jLInstruccion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 70, -1, -1));
 
         jLInstruccion3.setForeground(new java.awt.Color(0, 74, 173));
         jLInstruccion3.setText("al inglés");
-        getContentPane().add(jLInstruccion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, -1, -1));
+        jPanel1.add(jLInstruccion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/botonS_60x142.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, 150, 70));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, 150, 70));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/botonM_60x141.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, 140, 70));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, 140, 70));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Modo reto 800x457.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 460));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 460));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
         setLocationRelativeTo(null);
@@ -198,6 +211,7 @@ public class ModoRetoMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JTextField jTxtEscribir;
     // End of variables declaration//GEN-END:variables
