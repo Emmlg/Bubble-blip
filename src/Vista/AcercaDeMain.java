@@ -21,7 +21,7 @@ public class AcercaDeMain extends javax.swing.JFrame {
     public AcercaDeMain() {
         initComponents();
         tipoFuente= new Fuentes();
-        jLAcercaD.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 83));
+        jLAcercaD.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 50));
     }
 
     /**
@@ -47,12 +47,12 @@ public class AcercaDeMain extends javax.swing.JFrame {
 
         jLAcercaD.setForeground(new java.awt.Color(255, 255, 255));
         jLAcercaD.setText("ACERCA DE");
-        getContentPane().add(jLAcercaD, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, -1, -1));
+        getContentPane().add(jLAcercaD, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Consolas", 0, 30)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Bubble-Blip");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Consolas", 0, 30)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -80,9 +80,10 @@ public class AcercaDeMain extends javax.swing.JFrame {
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Acerca de 800x457.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 460));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 500));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**

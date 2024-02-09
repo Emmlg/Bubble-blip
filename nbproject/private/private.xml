@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/abiga/Desktop/Bubble/Bubble-blip/src/Vista/MensajeErrorMain.java</file>
             <file>file:/C:/Users/abiga/Desktop/Bubble/Bubble-blip/src/Vista/MenuMain.java</file>
             <file>file:/C:/Users/abiga/Desktop/Bubble/Bubble-blip/src/Tipografias/Fuentes.java</file>
@@ -10,6 +11,10 @@
             <file>file:/C:/Users/abiga/Desktop/Bubble/Bubble-blip/src/Vista/Copia%20de%20Tarjeta%20de%20presentación%20de%20limpieza%20con%20burbujas%20azules.gif</file>
             <file>file:/C:/Users/abiga/Desktop/Bubble/Bubble-blip/src/Vista/InicializacionMain.java</file>
             <file>file:/C:/Users/abiga/Desktop/Bubble/Bubble-blip/src/Vista/AcercaDeMain.java</file>
+=======
+            <file>file:/C:/Users/EMmanuel/Music/Bubble-Blip/src/Modelo/ConnectionVoice.java</file>
+            <file>file:/C:/Users/EMmanuel/Music/Bubble-Blip/src/Controlador/ControllEnglishVoice.java</file>
+>>>>>>> ef3c022c7bbc3e1d76779e2246018fd20fff6de4
         </group>
     </open-files>
 </project-private>
