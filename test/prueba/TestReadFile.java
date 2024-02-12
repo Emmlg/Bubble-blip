@@ -23,7 +23,6 @@ public class TestReadFile {
         for (String l : ls) {
             System.out.println(l);
         }
-        
-        
+
     }    
 }
