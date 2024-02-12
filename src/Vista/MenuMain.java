@@ -103,9 +103,9 @@ public class MenuMain extends javax.swing.JFrame {
     private void BotonMRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonMRActionPerformed
         // TODO add your handling code here:
         
-        ModoRetoMain obj = new ModoRetoMain();
+        /*ModoRetoMain obj = new ModoRetoMain();
         obj.setVisible(true);
-        dispose();
+        dispose();*/
         
     }//GEN-LAST:event_BotonMRActionPerformed
 
