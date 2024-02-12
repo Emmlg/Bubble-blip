@@ -41,6 +41,7 @@ public class MenuMain extends javax.swing.JFrame {
         BotonConfi = new javax.swing.JButton();
         BotonAD = new javax.swing.JButton();
         jLNombreJuego = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,6 +51,11 @@ public class MenuMain extends javax.swing.JFrame {
         BotonMC.setText("MODO CLÁSICO");
         BotonMC.setBorderPainted(false);
         BotonMC.setContentAreaFilled(false);
+        BotonMC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonMCActionPerformed(evt);
+            }
+        });
         getContentPane().add(BotonMC, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 200, 50));
 
         BotonMR.setForeground(new java.awt.Color(255, 255, 255));
@@ -67,6 +73,11 @@ public class MenuMain extends javax.swing.JFrame {
         BotonConfi.setText("CONFIGURACIÓN");
         BotonConfi.setBorderPainted(false);
         BotonConfi.setContentAreaFilled(false);
+        BotonConfi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonConfiActionPerformed(evt);
+            }
+        });
         getContentPane().add(BotonConfi, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 200, 50));
 
         BotonAD.setForeground(new java.awt.Color(255, 255, 255));
@@ -83,6 +94,16 @@ public class MenuMain extends javax.swing.JFrame {
         jLNombreJuego.setForeground(new java.awt.Color(255, 255, 255));
         jLNombreJuego.setText("BUBBLE-BLIP");
         getContentPane().add(jLNombreJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, -1, -1));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/botoncerrarsesion1.png"))); // NOI18N
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 390, 50, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Menù800x457.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 460));
@@ -103,11 +124,37 @@ public class MenuMain extends javax.swing.JFrame {
     private void BotonMRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonMRActionPerformed
         // TODO add your handling code here:
         
-        /*ModoRetoMain obj = new ModoRetoMain();
+        ModoReto obj = new ModoReto();
         obj.setVisible(true);
-        dispose();*/
+        dispose();
         
     }//GEN-LAST:event_BotonMRActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+         
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void BotonMCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonMCActionPerformed
+        // TODO add your handling code here:
+        
+        ModoClasico obj = new ModoClasico();
+        obj.setVisible(true);
+        dispose();
+        
+    }//GEN-LAST:event_BotonMCActionPerformed
+
+    private void BotonConfiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonConfiActionPerformed
+        // TODO add your handling code here:
+        
+        Configuracion obj = new Configuracion();
+        obj.setVisible(true);
+        dispose();
+        
+    }//GEN-LAST:event_BotonConfiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,6 +196,7 @@ public class MenuMain extends javax.swing.JFrame {
     private javax.swing.JButton BotonConfi;
     private javax.swing.JButton BotonMC;
     private javax.swing.JButton BotonMR;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLNombreJuego;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables

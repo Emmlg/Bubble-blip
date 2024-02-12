@@ -6,7 +6,6 @@
 package Vista;
 
 import Tipografias.Fuentes;
-import static java.awt.GridBagConstraints.BOTH;
 
 /**
  *
@@ -22,10 +21,9 @@ public class InicializacionMain extends javax.swing.JFrame {
     Fuentes tipoFuente;
     public InicializacionMain() {
         initComponents();
-        //this.setExtendedState(this.MAXIMIZED_BOTH);
+        this.setLocationRelativeTo(null);
         tipoFuente= new Fuentes();
         jLNombreJuego.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 83));
-        //jLTBienvenida.setFont(tipoFuente.fuente(tipoFuente.CLEAR, 1, 45));
         jLCargando.setFont(tipoFuente.fuente(tipoFuente.NINE, 1, 45));
         
         
@@ -47,6 +45,7 @@ public class InicializacionMain extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setFocusableWindowState(false);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

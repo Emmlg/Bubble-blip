@@ -20,6 +20,7 @@ public class AcercaDeMain extends javax.swing.JFrame {
     Fuentes tipoFuente;
     public AcercaDeMain() {
         initComponents();
+        this.setLocationRelativeTo(null);
         tipoFuente= new Fuentes();
         jLAcercaD.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 50));
     }
@@ -40,6 +41,7 @@ public class AcercaDeMain extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,12 +49,12 @@ public class AcercaDeMain extends javax.swing.JFrame {
 
         jLAcercaD.setForeground(new java.awt.Color(255, 255, 255));
         jLAcercaD.setText("ACERCA DE");
-        getContentPane().add(jLAcercaD, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, -1, -1));
+        getContentPane().add(jLAcercaD, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Consolas", 0, 30)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Bubble-Blip");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Consolas", 0, 30)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -79,12 +81,31 @@ public class AcercaDeMain extends javax.swing.JFrame {
         jLabel8.setText("22 de Febrero del 2024");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, -1, -1));
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/botoncerrarsesion1.png"))); // NOI18N
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 380, 50, 60));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Acerca de 800x457.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 460));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        MenuMain obj = new MenuMain();
+        obj.setVisible(true);
+        dispose();
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -122,6 +143,7 @@ public class AcercaDeMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLAcercaD;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

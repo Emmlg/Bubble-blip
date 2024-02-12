@@ -20,6 +20,7 @@ public class MensajeErrorMain extends javax.swing.JFrame {
     Fuentes tipoFuente;
     public MensajeErrorMain() {
         initComponents();
+        this.setLocationRelativeTo(null);
         tipoFuente= new Fuentes();
         jLUps.setFont(tipoFuente.fuente(tipoFuente.CHAUR, 0, 23));
     }

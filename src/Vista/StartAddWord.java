@@ -22,7 +22,8 @@ public class StartAddWord extends javax.swing.JFrame {
         initComponents();
         tipoFuente = new Fuentes();
         //cuerpo = new Fuentes();
-        Subtitulo.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 45));
+        Subtitulo.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 50));
+        BComenzar.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 35));
     }
 
     /**
@@ -42,10 +43,10 @@ public class StartAddWord extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         BComenzar = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,32 +55,37 @@ public class StartAddWord extends javax.swing.JFrame {
         Subtitulo.setForeground(new java.awt.Color(0, 74, 173));
         Subtitulo.setText("Ingresa tus palabras aquí");
         Subtitulo.setName(""); // NOI18N
-        getContentPane().add(Subtitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, -1, -1));
+        getContentPane().add(Subtitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, -1, -1));
 
         Español.setFont(new java.awt.Font("Consolas", 0, 36)); // NOI18N
         Español.setForeground(new java.awt.Color(23, 159, 235));
         Español.setText("Español");
-        getContentPane().add(Español, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, -1, -1));
+        getContentPane().add(Español, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, -1, -1));
 
         Ingles.setFont(new java.awt.Font("Consolas", 0, 36)); // NOI18N
         Ingles.setForeground(new java.awt.Color(23, 159, 235));
         Ingles.setText("Inglés");
-        getContentPane().add(Ingles, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, -1, -1));
+        getContentPane().add(Ingles, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 180, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton1.setText("+");
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 50, 50));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 50, 50));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton2.setText("+");
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, 50, 50));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 220, -1, 50));
 
         jTextField1.setBorder(null);
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 250, 50));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 390, 50));
 
         jTextField2.setBorder(null);
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -87,36 +93,45 @@ public class StartAddWord extends javax.swing.JFrame {
                 jTextField2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, 240, 50));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 220, 390, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconcontrolinicio5.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 100, 70));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 100, 70));
 
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("COMENZAR");
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 100, 30));
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 210, 120));
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 300, 190, 120));
-
-        BComenzar.setBackground(new java.awt.Color(0, 0, 102));
-        BComenzar.setFont(new java.awt.Font("Agency FB", 0, 24)); // NOI18N
-        BComenzar.setForeground(new java.awt.Color(255, 255, 255));
-        BComenzar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/boton2.png"))); // NOI18N
-        BComenzar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        BComenzar.setForeground(new java.awt.Color(23, 159, 235));
+        BComenzar.setText("COMENZAR");
         BComenzar.setBorderPainted(false);
         BComenzar.setContentAreaFilled(false);
-        BComenzar.setMargin(new java.awt.Insets(5, 10, 5, 10));
         BComenzar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BComenzarActionPerformed(evt);
             }
         });
-        getContentPane().add(BComenzar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, 150, 50));
+        getContentPane().add(BComenzar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 550, 140, 70));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Inicio.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 470));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/BotonC_60x142.png"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 550, 140, 70));
+
+        jTable1.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Palabras en español", "Palabras en inglés"
+            }
+        ));
+        jTable1.setRowHeight(30);
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 930, 180));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Inicio1137x650.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 650));
 
         pack();
         setLocationRelativeTo(null);
@@ -128,7 +143,16 @@ public class StartAddWord extends javax.swing.JFrame {
 
     private void BComenzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BComenzarActionPerformed
         // TODO add your handling code here:
+        
+        MenuMain obj = new MenuMain();
+        obj.setVisible(true);
+        dispose();
+        
     }//GEN-LAST:event_BComenzarActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,11 +196,11 @@ public class StartAddWord extends javax.swing.JFrame {
     private javax.swing.JLabel Subtitulo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables

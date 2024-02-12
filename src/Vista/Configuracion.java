@@ -19,9 +19,14 @@ public class Configuracion extends javax.swing.JFrame {
     Fuentes tipoFuente;
     public Configuracion() {
         initComponents();
+        this.setLocationRelativeTo(null);
         tipoFuente = new Fuentes();
         //cuerpo = new Fuentes();
         TituloC.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 58));
+        BCantidad.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 30));
+        BSonido.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 34));
+        BTiempo.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 30));
+        BAcercaDe.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 34));
     }
 
     /**
@@ -46,7 +51,7 @@ public class Configuracion extends javax.swing.JFrame {
 
         TituloC.setForeground(new java.awt.Color(255, 255, 255));
         TituloC.setText("CONFIGURACIÓN");
-        getContentPane().add(TituloC, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, 80));
+        getContentPane().add(TituloC, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, -1, 90));
 
         BCantidad.setForeground(new java.awt.Color(255, 255, 255));
         BCantidad.setText("CANTIDAD DE PALABRAS");
@@ -57,30 +62,45 @@ public class Configuracion extends javax.swing.JFrame {
                 BCantidadActionPerformed(evt);
             }
         });
-        getContentPane().add(BCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 200, 40));
+        getContentPane().add(BCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, 240, 60));
 
         BSonido.setForeground(new java.awt.Color(255, 255, 255));
         BSonido.setText("SONIDO");
         BSonido.setBorderPainted(false);
         BSonido.setContentAreaFilled(false);
-        getContentPane().add(BSonido, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 183, -1, 30));
+        getContentPane().add(BSonido, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 240, 60));
 
         BTiempo.setForeground(new java.awt.Color(255, 255, 255));
         BTiempo.setText("TIEMPO DE RESPUESTA");
         BTiempo.setBorderPainted(false);
         BTiempo.setContentAreaFilled(false);
-        getContentPane().add(BTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 170, 40));
+        BTiempo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTiempoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 240, 60));
 
         BAcercaDe.setForeground(new java.awt.Color(255, 255, 255));
         BAcercaDe.setText("ACERCA DE");
         BAcercaDe.setBorderPainted(false);
         BAcercaDe.setContentAreaFilled(false);
-        getContentPane().add(BAcercaDe, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 100, -1));
+        BAcercaDe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BAcercaDeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BAcercaDe, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, 240, 60));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/botoncerrarsesion1.png"))); // NOI18N
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 40, 60));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 390, 40, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Configuracion.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 457));
@@ -92,6 +112,29 @@ public class Configuracion extends javax.swing.JFrame {
     private void BCantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BCantidadActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BCantidadActionPerformed
+
+    private void BTiempoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTiempoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BTiempoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        MenuMain obj = new MenuMain();
+        obj.setVisible(true);
+        dispose();
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void BAcercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BAcercaDeActionPerformed
+        // TODO add your handling code here:
+        
+        AcercaDeMain obj = new AcercaDeMain();
+        obj.setVisible(true);
+        dispose();
+        
+        
+    }//GEN-LAST:event_BAcercaDeActionPerformed
 
     /**
      * @param args the command line arguments
