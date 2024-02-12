@@ -83,13 +83,18 @@ public class ModoReto extends javax.swing.JFrame {
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 700, 70, 70));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/corazon50x50.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 60, 70));
-        getContentPane().add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 360, 30));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 60, 60));
+        getContentPane().add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 360, 30));
 
         BMenu.setForeground(new java.awt.Color(46, 27, 91));
         BMenu.setText("MENÚ");
         BMenu.setBorderPainted(false);
         BMenu.setContentAreaFilled(false);
+        BMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BMenuActionPerformed(evt);
+            }
+        });
         getContentPane().add(BMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 710, 140, 60));
 
         BSalir.setForeground(new java.awt.Color(46, 27, 91));
@@ -121,7 +126,21 @@ public class ModoReto extends javax.swing.JFrame {
 
     private void BSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BSalirActionPerformed
         // TODO add your handling code here:
+        
+        MenuMain obj = new MenuMain();
+        obj.setVisible(true);
+        dispose();
+        
     }//GEN-LAST:event_BSalirActionPerformed
+
+    private void BMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BMenuActionPerformed
+        // TODO add your handling code here:
+        
+        MenuMain obj = new MenuMain();
+        obj.setVisible(true);
+        dispose();
+        
+    }//GEN-LAST:event_BMenuActionPerformed
 
     /**
      * @param args the command line arguments

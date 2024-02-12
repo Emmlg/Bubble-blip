@@ -21,9 +21,11 @@ public class ModoClasico extends javax.swing.JFrame {
         initComponents();
         tipoFuente = new Fuentes();
         //cuerpo = new Fuentes();
-        LTexto1.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 17));
-        LTexto2.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 17));
-        LTexto3.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 17));
+        LTexto1.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 27));
+        LTexto2.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 27));
+        LTexto3.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 27));
+        BLetraSalir.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 40));
+        BLetraMenu.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 40));
     }
 
     /**
@@ -53,24 +55,30 @@ public class ModoClasico extends javax.swing.JFrame {
 
         LTexto1.setForeground(new java.awt.Color(0, 74, 173));
         LTexto1.setText("Presta atención al");
-        getContentPane().add(LTexto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 180, 40));
+        getContentPane().add(LTexto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 70, 250, 30));
 
         LTexto2.setForeground(new java.awt.Color(0, 74, 173));
         LTexto2.setText("audio y selecciona");
-        getContentPane().add(LTexto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 60, 180, 30));
+        getContentPane().add(LTexto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 110, 230, 30));
 
         LTexto3.setForeground(new java.awt.Color(0, 74, 173));
         LTexto3.setText("la palabra correcta");
-        getContentPane().add(LTexto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, 180, 20));
+        getContentPane().add(LTexto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 150, 250, 30));
 
         BLetraSalir.setForeground(new java.awt.Color(31, 19, 71));
-        BLetraSalir.setText("Salir");
+        BLetraSalir.setText("SALIR");
         BLetraSalir.setBorderPainted(false);
         BLetraSalir.setContentAreaFilled(false);
-        getContentPane().add(BLetraSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 413, 60, 30));
+        BLetraSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BLetraSalirActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BLetraSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 720, 130, 60));
 
         BLetraMenu.setForeground(new java.awt.Color(31, 19, 71));
-        BLetraMenu.setText("Menú");
+        BLetraMenu.setText("MENÚ");
+        BLetraMenu.setActionCommand("MENÙ");
         BLetraMenu.setBorderPainted(false);
         BLetraMenu.setContentAreaFilled(false);
         BLetraMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -78,34 +86,34 @@ public class ModoClasico extends javax.swing.JFrame {
                 BLetraMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(BLetraMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 420, -1, 20));
+        getContentPane().add(BLetraMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 720, 130, 60));
 
-        BotonMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/boton4.png"))); // NOI18N
+        BotonMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/botonMY_60x142.png"))); // NOI18N
         BotonMenu.setBorderPainted(false);
         BotonMenu.setContentAreaFilled(false);
-        getContentPane().add(BotonMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 100, 40));
+        getContentPane().add(BotonMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 720, 150, 60));
 
-        BotonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/boton3.png"))); // NOI18N
+        BotonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/botonSalirY_60x142.png"))); // NOI18N
         BotonSalir.setBorderPainted(false);
         BotonSalir.setContentAreaFilled(false);
-        getContentPane().add(BotonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 80, 40));
+        getContentPane().add(BotonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 720, 150, 60));
 
-        LCorazon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/corazon.png"))); // NOI18N
-        getContentPane().add(LCorazon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
+        LCorazon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/corazon50x50.png"))); // NOI18N
+        getContentPane().add(LCorazon, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 50, 60));
 
         BSonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/botonsonido2.png"))); // NOI18N
         BSonido.setBorderPainted(false);
         BSonido.setContentAreaFilled(false);
-        getContentPane().add(BSonido, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 80, 60));
+        getContentPane().add(BSonido, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, 80, 60));
 
-        BPausa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/botonpausa1.png"))); // NOI18N
+        BPausa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/BPausa60x60.png"))); // NOI18N
         BPausa.setBorderPainted(false);
         BPausa.setContentAreaFilled(false);
-        getContentPane().add(BPausa, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 410, 70, -1));
-        getContentPane().add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, 20));
+        getContentPane().add(BPausa, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 720, 70, 60));
+        getContentPane().add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 250, 30));
 
-        LFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Modo clasico.png"))); // NOI18N
-        getContentPane().add(LFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 457));
+        LFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/ModoClasico1400x800.png"))); // NOI18N
+        getContentPane().add(LFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1400, 800));
 
         pack();
         setLocationRelativeTo(null);
@@ -113,7 +121,21 @@ public class ModoClasico extends javax.swing.JFrame {
 
     private void BLetraMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BLetraMenuActionPerformed
         // TODO add your handling code here:
+        
+        MenuMain obj = new MenuMain();
+        obj.setVisible(true);
+        dispose();
+        
     }//GEN-LAST:event_BLetraMenuActionPerformed
+
+    private void BLetraSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BLetraSalirActionPerformed
+        // TODO add your handling code here:
+        
+        MenuMain obj = new MenuMain();
+        obj.setVisible(true);
+        dispose();
+        
+    }//GEN-LAST:event_BLetraSalirActionPerformed
 
     /**
      * @param args the command line arguments
