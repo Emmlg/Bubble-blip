@@ -21,29 +21,29 @@ public class ControlReadF {
     rf = new ReadFiles();
     
     }
-    
-    
+     
     
     public ArrayList<String> similarW(String fineWord,int cantW){
     
-        int randomNum;
         ArrayList<String> lsw =rf.lstSimilarW(fineWord);
-        ArrayList<String> lsw1 = null ;
+        ArrayList<String> lsw1 = new ArrayList<String>(); 
         
-        for(int i = 1; i <cantW;i++){
-            System.out.println(randomNum = (int)Math.random()*cantW);  
+        int max = lsw.size(); // la cantidad de la lista de palabras
+        int min = 1; // inicia en 1 porque la palbra original esta en 0
+        int range = max - min + 1;
+        int randomNum;
+
+        lsw1.add(lsw.get(0));
+        for(int i = 1; i <cantW;i++){ // agragamos la cantidad que pida el usuario
             
-           // String f = lsw.get(0);
-      //      System.out.println(f);
-         //  lsw1.add(f);
-          
-            
+            randomNum = (int)(Math.random() * range) + min;
+
+            lsw1.add( lsw.get(randomNum) ); 
         }
-       
-        
-        
-     return lsw ;
+ 
+     return lsw1 ;
     }
+    
     
     
     

@@ -21,12 +21,11 @@ public class VoiceClass {
   
   private final String DirKevinVz = "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory";
   private final String vzNmeKevin =  "kevin16" ;
-  
-          
-    public VoiceClass() {
-               
-    }
     
+  
+    public VoiceClass() {
+        
+    }
 
  private void sleepTime(int timeS){
      
@@ -37,19 +36,20 @@ public class VoiceClass {
     } catch (InterruptedException e) {
         // Handle interruption exception if needed
         e.printStackTrace();
+        System.out.println("error de Thread Time");
     } 
      
  }
     
     
-public boolean speakW(String word){
-
+public boolean speakWKevin(String word){
+    
     System.setProperty("freetts.voices",DirKevinVz);        
-    VoiceManager manager =  VoiceManager.getInstance();
-    Voice  voice = manager.getVoice(vzNmeKevin);
-
+    VoiceManager manager = VoiceManager.getInstance();
+    Voice voice = manager.getVoice(vzNmeKevin);
+    
     voice.allocate();
- boolean status = voice.speak(word);
+    boolean status = voice.speak(word);
     voice.deallocate();
     
 return status;
@@ -57,7 +57,7 @@ return status;
 
 
 
-public  boolean  say2Times(String word) throws InterruptedException{
+public  boolean  say2TimesKevin(String word) throws InterruptedException{
         
     System.setProperty("freetts.voices",DirKevinVz);        
     VoiceManager manager = VoiceManager.getInstance();

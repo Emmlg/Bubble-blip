@@ -18,8 +18,8 @@ public class TestReadFile {
      
         ControlReadF testRF = new ControlReadF();
         
-        ArrayList<String> ls = testRF.similarW("car",4);
-      //  System.out.println(ls.toArray());
+        ArrayList<String> ls = testRF.similarW("speak",4);
+     
         for (String l : ls) {
             System.out.println(l);
         }

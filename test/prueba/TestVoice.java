@@ -17,8 +17,8 @@ public class TestVoice {
         
         ControllEnglishVoice testVoice =  new ControllEnglishVoice();
         
-        System.out.println(testVoice.sayWord("to talk"));
-        System.out.println(testVoice.say2Times("to speak"));
+        System.out.println(testVoice.sayWordKevin("to talk"));
+        System.out.println(testVoice.say2TimesKevin("to speak"));
         
         
     }

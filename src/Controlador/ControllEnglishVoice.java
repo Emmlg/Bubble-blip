@@ -23,16 +23,15 @@ public class ControllEnglishVoice {
         
     }
     
-    public boolean sayWord(String word) {
+    public boolean sayWordKevin(String word) {
         
         
-     return voice.speakW(word);
+     return voice.speakWKevin(word);
         
     }
-    public boolean say2Times(String word) throws InterruptedException {
+    public boolean say2TimesKevin(String word) throws InterruptedException {
         
-        
-     return voice.say2Times(word);
+     return voice.say2TimesKevin(word);
         
     }
 

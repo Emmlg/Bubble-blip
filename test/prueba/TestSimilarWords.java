@@ -20,12 +20,12 @@ public class TestSimilarWords {
      ControllDataAPI testSuggestW = new ControllDataAPI();
         
         String w = "car";
-        String listw[] = testSuggestW.APIsoundsSimilar(w);
+        String listw[] = testSuggestW.APIsoundsSimilar(w,5);
         String listw1[] = testSuggestW.APIspeltSimilar(w);
-        String listw2[] = testSuggestW.APIfindSimilar(w);
-        String listw3[] = testSuggestW.APIprefixHintSuggestions(w);
+        String listw2[] = testSuggestW.APIfindSimilar(w,5);
+        String listw3[] = testSuggestW.APIprefixHintSuggestions(w,4);
         
-        for (String string : listw2) {
+        for (String string : listw) {
             System.out.println(string);
         }
         

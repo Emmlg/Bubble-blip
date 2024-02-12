@@ -11,7 +11,7 @@ import com.sun.speech.freetts.VoiceManager;
  *
  * @author EMmanuel
  */
-public class Voice {
+public class VoicePrueba {
     
     public static void main(String[] args) {
         
