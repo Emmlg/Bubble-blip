@@ -19,7 +19,7 @@ public class TestSimilarWords {
      
      ControllDataAPI testSuggestW = new ControllDataAPI();
         
-        String w = "car";
+        String w = "word";
         String listw[] = testSuggestW.APIsoundsSimilar(w,4);
         String listw1[] = testSuggestW.APIspeltSimilar(w);
         String listw2[] = testSuggestW.APIfindSimilar(w,5);
