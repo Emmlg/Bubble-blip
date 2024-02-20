@@ -63,7 +63,7 @@ public class MensajeMotivacion extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 30, 30));
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Mensaje motivacion.png"))); // NOI18N
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/MensajeMotivacion.png"))); // NOI18N
         getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 197));
 
         pack();
