@@ -6,6 +6,8 @@
 package Vista;
 
 import Tipografias.Fuentes;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -13,6 +15,7 @@ import Tipografias.Fuentes;
  */
 public class StartAddWord extends javax.swing.JFrame {
 
+    DefaultTableModel modelo;
     /**
      * Creates new form InicioMain
      */
@@ -23,7 +26,8 @@ public class StartAddWord extends javax.swing.JFrame {
         tipoFuente = new Fuentes();
         //cuerpo = new Fuentes();
         Subtitulo.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 50));
-        BComenzar.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 35));
+        btncomenzar.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 35));
+        btnañadir.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 30));
     }
 
     /**
@@ -38,16 +42,14 @@ public class StartAddWord extends javax.swing.JFrame {
         Subtitulo = new javax.swing.JLabel();
         Español = new javax.swing.JLabel();
         Ingles = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        JTFpe = new javax.swing.JTextField();
+        JTFpi = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        BComenzar = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        btncomenzar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        tabla = new javax.swing.JTable();
+        btnañadir = new javax.swing.JButton();
+        JLfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -67,92 +69,92 @@ public class StartAddWord extends javax.swing.JFrame {
         Ingles.setText("Inglés");
         getContentPane().add(Ingles, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 180, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton1.setText("+");
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 50, 50));
+        JTFpe.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        JTFpe.setBorder(null);
+        getContentPane().add(JTFpe, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 390, 50));
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton2.setText("+");
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        JTFpi.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        JTFpi.setBorder(null);
+        JTFpi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                JTFpiActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 220, -1, 50));
-
-        jTextField1.setBorder(null);
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 390, 50));
-
-        jTextField2.setBorder(null);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 220, 390, 50));
+        getContentPane().add(JTFpi, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 220, 390, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconcontrolinicio5.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 100, 70));
 
-        BComenzar.setForeground(new java.awt.Color(23, 159, 235));
-        BComenzar.setText("COMENZAR");
-        BComenzar.setBorderPainted(false);
-        BComenzar.setContentAreaFilled(false);
-        BComenzar.addActionListener(new java.awt.event.ActionListener() {
+        btncomenzar.setForeground(new java.awt.Color(23, 159, 235));
+        btncomenzar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/BotonC_60x142.png"))); // NOI18N
+        btncomenzar.setText("COMENZAR");
+        btncomenzar.setBorderPainted(false);
+        btncomenzar.setContentAreaFilled(false);
+        btncomenzar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btncomenzar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BComenzarActionPerformed(evt);
+                btncomenzarActionPerformed(evt);
             }
         });
-        getContentPane().add(BComenzar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 550, 140, 70));
+        getContentPane().add(btncomenzar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 550, 140, 70));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/BotonC_60x142.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 550, 140, 70));
-
-        jTable1.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabla.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
                 "Palabras en español", "Palabras en inglés"
             }
         ));
-        jTable1.setRowHeight(30);
-        jScrollPane1.setViewportView(jTable1);
+        tabla.setRowHeight(30);
+        jScrollPane1.setViewportView(tabla);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 930, 180));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Inicio1137x650.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 650));
+        btnañadir.setBackground(new java.awt.Color(204, 255, 255));
+        btnañadir.setText("AÑADIR");
+        btnañadir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnañadirActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnañadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 280, -1, -1));
 
-        pack();
-        setLocationRelativeTo(null);
+        JLfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Inicio1137x650.png"))); // NOI18N
+        getContentPane().add(JLfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 650));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void JTFpiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFpiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_JTFpiActionPerformed
 
-    private void BComenzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BComenzarActionPerformed
+    private void btncomenzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncomenzarActionPerformed
         // TODO add your handling code here:
         
         MenuMain obj = new MenuMain();
         obj.setVisible(true);
         dispose();
         
-    }//GEN-LAST:event_BComenzarActionPerformed
+    }//GEN-LAST:event_btncomenzarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnañadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnañadirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        
+        if (JTFpe.getText().equals("") || JTFpi.getText().equals("")){
+            JOptionPane.showMessageDialog(this, "Asegurate de llenar los campos requeridos");
+        }else{
+            String datos[] = {JTFpe.getText(), JTFpi.getText()};
+            
+            DefaultTableModel tblModel = (DefaultTableModel) tabla.getModel();
+            
+            tblModel.addRow(datos);
+        }
+        
+        JTFpe.setText("");
+        JTFpi.setText("");
+        
+    }//GEN-LAST:event_btnañadirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,18 +192,16 @@ public class StartAddWord extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BComenzar;
     private javax.swing.JLabel Español;
     private javax.swing.JLabel Ingles;
+    private javax.swing.JLabel JLfondo;
+    private javax.swing.JTextField JTFpe;
+    private javax.swing.JTextField JTFpi;
     private javax.swing.JLabel Subtitulo;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnañadir;
+    private javax.swing.JButton btncomenzar;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTable tabla;
     // End of variables declaration//GEN-END:variables
 }

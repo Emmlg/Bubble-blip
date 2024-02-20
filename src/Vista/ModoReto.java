@@ -6,6 +6,10 @@
 package Vista;
 
 import Tipografias.Fuentes;
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 
 /**
  *
@@ -19,17 +23,18 @@ public class ModoReto extends javax.swing.JFrame {
     
     Fuentes tipoFuente;
     
+    FondoPanel fondo = new FondoPanel();
+    
     public ModoReto() {
+        this.setContentPane(fondo);
         initComponents();
         tipoFuente= new Fuentes();
         //Fuente texto de instrucciones
-        mensajeInfo.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 30));
-        mensajeInfo2.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 30));
-        mensjaInfo3.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 30));
+        
         MensajeError.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 25));
         //Fuente texto botones
-        BSalir.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 40));
-        BMenu.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 40));
+        btnsalir.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 40));
+        btniniciar.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 40));
     }
 
     /**
@@ -41,106 +46,117 @@ public class ModoReto extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
+        JTFescribir = new javax.swing.JTextField();
         MensajeError = new javax.swing.JLabel();
-        mensajeInfo = new javax.swing.JLabel();
-        mensajeInfo2 = new javax.swing.JLabel();
-        mensjaInfo3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        BMenu = new javax.swing.JButton();
-        BSalir = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        btniniciar = new javax.swing.JButton();
+        btnsalir = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        JLcorazon = new javax.swing.JLabel();
+        barra = new javax.swing.JProgressBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setPreferredSize(new java.awt.Dimension(1500, 900));
 
-        jTextField1.setFont(new java.awt.Font("Consolas", 0, 24)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        JTFescribir.setFont(new java.awt.Font("Consolas", 0, 24)); // NOI18N
+        JTFescribir.setPreferredSize(new java.awt.Dimension(465, 71));
+        JTFescribir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                JTFescribirActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 600, 420, 60));
-        getContentPane().add(MensajeError, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 700, 480, 60));
 
-        mensajeInfo.setForeground(new java.awt.Color(0, 74, 173));
-        mensajeInfo.setText("Traduce la palabra");
-        getContentPane().add(mensajeInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 80, -1, -1));
-
-        mensajeInfo2.setForeground(new java.awt.Color(0, 74, 173));
-        mensajeInfo2.setText("del meteorito al");
-        getContentPane().add(mensajeInfo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 120, -1, -1));
-
-        mensjaInfo3.setForeground(new java.awt.Color(0, 74, 173));
-        mensjaInfo3.setText("inglés");
-        getContentPane().add(mensjaInfo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 160, -1, -1));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/BPausa60x60.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 700, 70, 70));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/corazon50x50.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 60, 60));
-        getContentPane().add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 360, 30));
-
-        BMenu.setForeground(new java.awt.Color(46, 27, 91));
-        BMenu.setText("MENÚ");
-        BMenu.setBorderPainted(false);
-        BMenu.setContentAreaFilled(false);
-        BMenu.addActionListener(new java.awt.event.ActionListener() {
+        btniniciar.setForeground(new java.awt.Color(46, 27, 91));
+        btniniciar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/botonM_60x141.png"))); // NOI18N
+        btniniciar.setText("INICIAR");
+        btniniciar.setBorderPainted(false);
+        btniniciar.setContentAreaFilled(false);
+        btniniciar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btniniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BMenuActionPerformed(evt);
+                btniniciarActionPerformed(evt);
             }
         });
-        getContentPane().add(BMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 710, 140, 60));
 
-        BSalir.setForeground(new java.awt.Color(46, 27, 91));
-        BSalir.setText("SALIR");
-        BSalir.setBorderPainted(false);
-        BSalir.setContentAreaFilled(false);
-        BSalir.addActionListener(new java.awt.event.ActionListener() {
+        btnsalir.setForeground(new java.awt.Color(46, 27, 91));
+        btnsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/botonS_60x142.png"))); // NOI18N
+        btnsalir.setText("SALIR");
+        btnsalir.setBorderPainted(false);
+        btnsalir.setContentAreaFilled(false);
+        btnsalir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnsalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BSalirActionPerformed(evt);
+                btnsalirActionPerformed(evt);
             }
         });
-        getContentPane().add(BSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 710, 140, 60));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/botonM_60x141.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 710, 140, 60));
+        jPanel1.setOpaque(false);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/botonS_60x142.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 710, 140, 60));
+        JLcorazon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/corazon50x50.png"))); // NOI18N
+        jPanel1.add(JLcorazon, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 60, 76));
+        jPanel1.add(barra, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 401, 44));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Modo reto 1400x800.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btniniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 657, Short.MAX_VALUE)
+                        .addComponent(MensajeError, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(JTFescribir, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(82, 82, 82)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btniniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(MensajeError, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 444, Short.MAX_VALUE)
+                        .addComponent(JTFescribir, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(122, 122, 122))))
+        );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void JTFescribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFescribirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_JTFescribirActionPerformed
 
-    private void BSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BSalirActionPerformed
+    private void btniniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btniniciarActionPerformed
         // TODO add your handling code here:
         
+        
+        
+    }//GEN-LAST:event_btniniciarActionPerformed
+
+    private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
+        // TODO add your handling code here:
+
         MenuMain obj = new MenuMain();
         obj.setVisible(true);
         dispose();
-        
-    }//GEN-LAST:event_BSalirActionPerformed
 
-    private void BMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BMenuActionPerformed
-        // TODO add your handling code here:
-        
-        MenuMain obj = new MenuMain();
-        obj.setVisible(true);
-        dispose();
-        
-    }//GEN-LAST:event_BMenuActionPerformed
+    }//GEN-LAST:event_btnsalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -178,18 +194,29 @@ public class ModoReto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BMenu;
-    private javax.swing.JButton BSalir;
+    private javax.swing.JLabel JLcorazon;
+    private javax.swing.JTextField JTFescribir;
     private javax.swing.JLabel MensajeError;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JProgressBar jProgressBar1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JLabel mensajeInfo;
-    private javax.swing.JLabel mensajeInfo2;
-    private javax.swing.JLabel mensjaInfo3;
+    private javax.swing.JProgressBar barra;
+    private javax.swing.JButton btniniciar;
+    private javax.swing.JButton btnsalir;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+
+    class FondoPanel extends JPanel{
+        
+        private Image imagen;
+        
+        public void paint (Graphics g){
+            imagen = new ImageIcon(getClass().getResource("/Img/ModoReto1400x800.png")).getImage();
+            g.drawImage(imagen, 0, 0, this.getWidth(), this.getHeight(), this);
+            setOpaque(false);
+            super.paint(g);
+                        
+        }
+        
+
+
+}
+
 }

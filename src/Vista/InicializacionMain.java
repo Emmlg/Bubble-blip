@@ -26,8 +26,48 @@ public class InicializacionMain extends javax.swing.JFrame {
         jLNombreJuego.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 83));
         jLCargando.setFont(tipoFuente.fuente(tipoFuente.NINE, 1, 45));
         
+         fill(80);
         
     }
+    
+    public void VentanaSiguiente(){
+    
+        StartAddWord inicio = new StartAddWord();
+        
+        inicio.setVisible(true);
+        
+        this.dispose();
+}
+    
+    
+    public void fill(int tiempo) {
+
+    Thread t;
+        t = new Thread(new Runnable() {
+            @Override
+            public void run(){
+                try{
+                    int counter = 0;
+                    while(counter<=100) {
+                        
+                        barra.setValue(counter);
+                        
+                        Thread.sleep(tiempo);
+                        counter +=2;
+                        // System.out.println(pg.getValue());
+                    }
+                    
+                    VentanaSiguiente();
+                
+                }catch(Exception ae){
+                    ae.printStackTrace(); 
+                }
+            }
+        });
+    t.start();
+       
+}
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -41,11 +81,12 @@ public class InicializacionMain extends javax.swing.JFrame {
         jLNombreJuego = new javax.swing.JLabel();
         jLTBienvenida = new javax.swing.JLabel();
         jLCargando = new javax.swing.JLabel();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        jLabel2 = new javax.swing.JLabel();
+        barra = new javax.swing.JProgressBar();
+        jLFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFocusableWindowState(false);
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -65,12 +106,12 @@ public class InicializacionMain extends javax.swing.JFrame {
         jLCargando.setText("CARGANDO......");
         getContentPane().add(jLCargando, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, -1, -1));
 
-        jProgressBar1.setBackground(new java.awt.Color(41, 245, 226));
-        jProgressBar1.setForeground(new java.awt.Color(41, 245, 226));
-        getContentPane().add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 380, 40));
+        barra.setBackground(new java.awt.Color(41, 245, 226));
+        barra.setForeground(new java.awt.Color(41, 245, 226));
+        getContentPane().add(barra, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 380, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Inicializaciòn800x457.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 460));
+        jLFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Inicializaciòn800x457.png"))); // NOI18N
+        getContentPane().add(jLFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 460));
 
         pack();
         setLocationRelativeTo(null);
@@ -113,10 +154,10 @@ public class InicializacionMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JProgressBar barra;
     private javax.swing.JLabel jLCargando;
+    private javax.swing.JLabel jLFondo;
     private javax.swing.JLabel jLNombreJuego;
     private javax.swing.JLabel jLTBienvenida;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JProgressBar jProgressBar1;
     // End of variables declaration//GEN-END:variables
 }

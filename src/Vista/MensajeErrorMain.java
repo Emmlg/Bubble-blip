@@ -77,7 +77,7 @@ public class MensajeErrorMain extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 30, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Mensaje error 300x197.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/MensajeError300x197.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 200));
 
         pack();
