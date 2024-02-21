@@ -43,12 +43,12 @@ public class ModoClasico extends javax.swing.JFrame {
         btnsalir.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 40));
         btniniciar.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 40));
         //fuentes burbujas
-        img1.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 40));
-        img2.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 40));
-        img3.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 40));
-        img4.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 40));
-        img5.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 40));
-        img6.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 40));
+        img1.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 18));
+        img2.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 18));
+        img3.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 18));
+        img4.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 18));
+        img5.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 18));
+        img6.setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 18));
         //fuente puntaje
         //BP.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 20));
     }
@@ -130,22 +130,35 @@ public class ModoClasico extends javax.swing.JFrame {
         btnsonido.setBorderPainted(false);
         btnsonido.setContentAreaFilled(false);
 
+        img1.setForeground(new java.awt.Color(255, 255, 255));
         img1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Bubble1.png"))); // NOI18N
+        img1.setText("Welcome!");
         img1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
+        img2.setBackground(new java.awt.Color(255, 255, 255));
+        img2.setForeground(new java.awt.Color(255, 255, 255));
         img2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Bubble2.png"))); // NOI18N
+        img2.setText("Are you ready?");
         img2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
+        img3.setForeground(new java.awt.Color(255, 255, 255));
         img3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Bubble1.png"))); // NOI18N
+        img3.setText("Welcome!");
         img3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
+        img4.setForeground(new java.awt.Color(255, 255, 255));
         img4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Bubble2.png"))); // NOI18N
+        img4.setText("Are you ready?");
         img4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
+        img5.setForeground(new java.awt.Color(255, 255, 255));
         img5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Bubble1.png"))); // NOI18N
+        img5.setText("Welcome!");
         img5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
+        img6.setForeground(new java.awt.Color(255, 255, 255));
         img6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Bubble2.png"))); // NOI18N
+        img6.setText("Are you ready?");
         img6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jPanel1.setOpaque(false);

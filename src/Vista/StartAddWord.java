@@ -29,6 +29,11 @@ public class StartAddWord extends javax.swing.JFrame {
         btncomenzar.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 35));
         btnañadir.setFont(tipoFuente.fuente(tipoFuente.NINE, 0, 30));
     }
+    
+    public void limpiarTF(){
+        JTFpe.setText("");
+        JTFpi.setText("");
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -52,6 +57,7 @@ public class StartAddWord extends javax.swing.JFrame {
         JLfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1150, 700));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Subtitulo.setForeground(new java.awt.Color(0, 74, 173));
@@ -123,6 +129,9 @@ public class StartAddWord extends javax.swing.JFrame {
 
         JLfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Inicio1137x650.png"))); // NOI18N
         getContentPane().add(JLfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 650));
+
+        pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void JTFpiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFpiActionPerformed
@@ -132,9 +141,32 @@ public class StartAddWord extends javax.swing.JFrame {
     private void btncomenzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncomenzarActionPerformed
         // TODO add your handling code here:
         
+        limpiarTF();
+        
+        boolean verificar = JTFpe.getText().equals("") || JTFpi.getText().equals("") ;
+        
+       
+        if (verificar && tabla.getRowCount()>=1){
+
+        String[] wSpansh = new String[tabla.getRowCount()];
+        
+        String[] wIngles = new String[tabla.getRowCount()];
+
+        for(int i=0;i<tabla.getRowCount(); i++){
+    
+        wSpansh[i] = (String) tabla.getValueAt(i,0);
+        
+        wIngles[i] = (String) tabla.getValueAt(i,1);
+     
+        } 
+        
+        
         MenuMain obj = new MenuMain();
         obj.setVisible(true);
         dispose();
+        }else{
+             JOptionPane.showMessageDialog(this, "Tienes que llenar los campos correspondientes");
+        }
         
     }//GEN-LAST:event_btncomenzarActionPerformed
 
@@ -151,8 +183,7 @@ public class StartAddWord extends javax.swing.JFrame {
             tblModel.addRow(datos);
         }
         
-        JTFpe.setText("");
-        JTFpi.setText("");
+        limpiarTF();
         
     }//GEN-LAST:event_btnañadirActionPerformed
 
