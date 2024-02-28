@@ -13,13 +13,18 @@ import Modelo.JSONParse;
  * @author EMmanuel
  */
 
-/**Cosas por mejorar , por el tiempo
- *  mejorar los numeros aleatorios para evitar repetirse
- *  que el cantwUser < tamano de la listaw
+
+
+/** @see 
  
+    * probablemente ocurra erro de IndexOutOfBoundsException
+     se debe a que no se inicializa correctamente la variable, corregir
+
+    * Cosas por mejorar , por el tiempo
+   mejorar los numeros aleatorios para evitar repetirse
+   que el cantwUser < tamano de la listaw
+
  */
-
-
 
 public class ControllDataAPI {
     

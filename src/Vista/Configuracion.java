@@ -68,6 +68,11 @@ public class Configuracion extends javax.swing.JFrame {
         BSonido.setText("SONIDO");
         BSonido.setBorderPainted(false);
         BSonido.setContentAreaFilled(false);
+        BSonido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BSonidoActionPerformed(evt);
+            }
+        });
         getContentPane().add(BSonido, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 240, 60));
 
         BTiempo.setForeground(new java.awt.Color(255, 255, 255));
@@ -110,15 +115,19 @@ public class Configuracion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BCantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BCantidadActionPerformed
-        // TODO add your handling code here:
+     
+        MusicPlayer.playMusic("/Music/SonidoBoton.wav");
+      
     }//GEN-LAST:event_BCantidadActionPerformed
 
     private void BTiempoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTiempoActionPerformed
-        // TODO add your handling code here:
+        
+         MusicPlayer.playMusic("/Music/SonidoBoton.wav");
     }//GEN-LAST:event_BTiempoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        
+         MusicPlayer.playMusic("/Music/SonidoBoton.wav");
         
         MenuMain obj = new MenuMain();
         obj.setVisible(true);
@@ -127,7 +136,8 @@ public class Configuracion extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void BAcercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BAcercaDeActionPerformed
-        // TODO add your handling code here:
+        
+         MusicPlayer.playMusic("/Music/SonidoBoton.wav");
         
         AcercaDeMain obj = new AcercaDeMain();
         obj.setVisible(true);
@@ -135,6 +145,11 @@ public class Configuracion extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_BAcercaDeActionPerformed
+
+    private void BSonidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BSonidoActionPerformed
+        
+         MusicPlayer.playMusic("/Music/SonidoBoton.wav");
+    }//GEN-LAST:event_BSonidoActionPerformed
 
     /**
      * @param args the command line arguments

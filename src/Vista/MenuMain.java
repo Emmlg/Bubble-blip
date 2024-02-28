@@ -113,7 +113,8 @@ public class MenuMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonADActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonADActionPerformed
-        // TODO add your handling code here:
+        
+         MusicPlayer.playMusic("/Music/SonidoBoton.wav");
         
         AcercaDeMain obj = new AcercaDeMain();
         obj.setVisible(true);
@@ -122,7 +123,8 @@ public class MenuMain extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonADActionPerformed
 
     private void BotonMRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonMRActionPerformed
-        // TODO add your handling code here:
+       
+         MusicPlayer.playMusic("/Music/SonidoBoton.wav");
         
         ModoReto obj = new ModoReto();
         obj.setVisible(true);
@@ -131,15 +133,14 @@ public class MenuMain extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonMRActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
         
-         
-        
+         MusicPlayer.playMusic("/Music/SonidoBoton.wav");
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void BotonMCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonMCActionPerformed
-        // TODO add your handling code here:
+        
+         MusicPlayer.playMusic("/Music/SonidoBoton.wav");
         
         ModoClasico obj = new ModoClasico();
         obj.setVisible(true);
@@ -148,7 +149,8 @@ public class MenuMain extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonMCActionPerformed
 
     private void BotonConfiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonConfiActionPerformed
-        // TODO add your handling code here:
+        
+         MusicPlayer.playMusic("/Music/SonidoBoton.wav");
         
         Configuracion obj = new Configuracion();
         obj.setVisible(true);

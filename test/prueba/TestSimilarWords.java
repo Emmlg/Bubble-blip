@@ -25,7 +25,7 @@ public class TestSimilarWords {
         String listw2[] = testSuggestW.APIfindSimilar(w,5);
         String listw3[] = testSuggestW.APIprefixHintSuggestions(w,4);
         
-        for (String string : listw3) {
+        for (String string : listw) {
             System.out.println(string);
         }
         

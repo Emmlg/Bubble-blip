@@ -18,11 +18,23 @@ public class TestReadFile {
      
         ControlReadF testRF = new ControlReadF();
         
-        ArrayList<String> ls = testRF.similarW("speak",4);
+         ArrayList<String> ls= new ArrayList<>();
      
-        for (String l : ls) {
+      /*  for (String l : ls) {
             System.out.println(l);
+        }*/
+        
+       for(int i=0;i <50;i++){
+           
+        ls = testRF.similarW("read",5);
+        
+            for (String string : ls) {
+                 System.out.print(string+" ");
+             }
+           System.out.println("");
         }
+        
+        
 
     }    
 }
