@@ -62,11 +62,7 @@ public ModoClasico() {
     height = this.getHeight()-400;
     status = true;
   //  wUser = new String[]{"speak","read","snow","car","believe"}; //palabras del usuario
-    
-    //wUser = wordStart.wEnglsih();
-    for (String x : wUser) {
-        System.out.println(x);
-    }
+
     rdF = new ControlReadF();
     speak = new ControllEnglishVoice();
     nextWord =0;
@@ -201,7 +197,7 @@ public void run() {
 tf.start();
 }
   
-    // puntaje Barra
+// puntaje Barra
    
     public void fill() {
 
@@ -295,6 +291,7 @@ public void message_sadHappy(){
    JOptionPane.showMessageDialog(null, panel, "Score", JOptionPane.DEFAULT_OPTION);
    
 }
+
 public void message_score(){
     
     int scorre = score;

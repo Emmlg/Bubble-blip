@@ -47,29 +47,6 @@ public class StartAddWord extends javax.swing.JFrame {
         obj.setVisible(true);
         dispose();
     }
-    /*
-    public String[] wSpanish(){
-        
-      for(int i=0;i<tabla.getRowCount(); i++){
-    
-        wSpansh[i] = (String) tabla.getValueAt(i,0);
-
-        }     
-        return wSpansh;
-    }
-    
-    public String[] wEnglsih(){
-        
-     for(int i=0;i<tabla.getRowCount(); i++){
-        
-        wIngles[i] = (String) tabla.getValueAt(i,1);
-     
-        } 
-        
-        return wIngles;
-    }*/
-    
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -181,7 +158,7 @@ public class StartAddWord extends javax.swing.JFrame {
 
         String[] wSpansh = new String[tabla.getRowCount()];
         
-       String[] wIngles = new String[tabla.getRowCount()];
+        String[] wIngles = new String[tabla.getRowCount()];
 
         for(int i=0;i<tabla.getRowCount(); i++){
     
@@ -192,7 +169,10 @@ public class StartAddWord extends javax.swing.JFrame {
         } 
         
         openMenu();
-       ModoClasico.wUser = wIngles;
+        ModoClasico.wUser = wIngles;
+        ModoReto.wUser = wIngles;
+        ModoReto.wUserSpanish = wSpansh;
+        
         
         }else{
             
