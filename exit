@@ -1,0 +1,34 @@
+[33m80c2824[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m modificacion para test sin dependencia de otros frames
+[33mb8f56a4[m Eliminacion de componentes para reducir los 100mb de github
+[33m67fa135[m eliminacion de musica called soundhappy por tamanofile
+[33mc0e130c[m eliminacion de musica called instrumental por tamanofile
+[33ma9cfcfe[m Juego finalizado, modo reto. pendiente: optimizar codigo, mejorar logica del juego, optimizar eventos, validar palabras de entrada, colocar color a las palabras de los meteoritos
+[33m374e6ad[m  modo clasico finalizado, se agrego sonido a los botones y alas burbujas, pendiente el sonido del juego
+[33mdcdd679[m actualizacion de disenos
+[33m4afa423[m[33m ([m[1;31morigin/main[m[33m)[m cambios agregados en StartAddWord y ModoClasico
+[33m12d8570[m actualizacion de interfaces
+[33m8335ab5[m modificacion de clase test
+[33mf78be9f[m cambios en las interfaces StartAddWord, ModoClasico, ModoReto e InicializacionMain, funcionalidad en las barras y se agregaron dos imagenes, abi
+[33m0b75ffd[m pull antes de subir , modelo y controller
+[33m2b4a31e[m Modificacion de las medidas del modo clasico y configuracion de todos los botones
+[33m1a7e730[m ,pruebas de falling effect
+[33m984aaff[m pull
+[33m9b363ef[m modificacion de controladorSimilarW de ReadFile, devuelve la cantidad que el usuario necesita
+[33m03de03a[m agrego sugerencia de palabras con txt y se esta aplicando un tamano de palabras determinados, controll para cada clase
+[33mdf80818[m Modificacion interfaz modo reto y eliminacion de dos interfaces y una imagen
+[33m36a900c[m modificaciones de las propiedades del proyecto
+[33m21464ba[m Merge branch 'main' of https://github.com/Emmlg/Bubble-blip
+[33m5244d9e[m actualizacion
+[33m5af7315[m se agrega librerias de Voz
+[33m2552af0[m private.xml
+[33mef3c022[m agrego Jpanel Inicializacion
+[33m9efd230[m modificacion de modelo y controller para voz, funcional. se hizo un test en el paquete test
+[33m525d952[m correccion de propiedades
+[33mf6e7c79[m commit despues del pull
+[33m36dc90a[m correccion de errores
+[33m86b0823[m agrego libreria e intento de mvc para la voz
+[33mab2e9a9[m Cambio de nombre interface
+[33m76b55fd[m Diseño abi: Inicio, Menú, Modo Reto, Acerca de, Mensaje error. Falta agregar eventos a algunos botones y validar.
+[33m0ebb1db[m Create README.md
+[33mc9b217c[m arquitectura MVC, carpetas
+[33m4a9faa7[m Inicio de proyecto, arquitecura MVC
