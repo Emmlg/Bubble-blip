@@ -122,7 +122,7 @@
           <Color blue="eb" green="9f" red="17" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Img/BotonC_60x142.png"/>
+          <Image iconType="3" name="/Img/botonS_60x142.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="COMENZAR"/>
         <Property name="borderPainted" type="boolean" value="false"/>

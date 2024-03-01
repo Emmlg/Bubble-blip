@@ -106,6 +106,8 @@ public void addlbToFrame(String word,int posx,int posy){
     ImageIcon icon = new ImageIcon(ModoClasico.class.getResource("/Img/meteoro128x128.png"));
     lb[nextWord] = new JLabel(icon);
 
+    lb[nextWord].setFont(tipoFuente.fuente(tipoFuente.CHERRY, 0, 18));
+    lb[nextWord].setForeground(Color.WHITE);
     lb[nextWord].setText(word); 
     lb[nextWord].setHorizontalTextPosition(0); lb[nextWord].setVerticalTextPosition(3);
     lb[nextWord].setBounds(posx,posy,130,150);
@@ -526,6 +528,7 @@ public ArrayList<JLabel> getLbComponent(){
         }
  
         if(correctWordsC == wordUsuarioC){
+            status = false;
             message_score();
             openMenu();
         }

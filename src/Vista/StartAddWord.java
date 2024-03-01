@@ -65,7 +65,6 @@ public class StartAddWord extends javax.swing.JFrame {
         JLfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1150, 700));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Subtitulo.setForeground(new java.awt.Color(0, 74, 173));
@@ -100,7 +99,7 @@ public class StartAddWord extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 100, 70));
 
         btncomenzar.setForeground(new java.awt.Color(23, 159, 235));
-        btncomenzar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/BotonC_60x142.png"))); // NOI18N
+        btncomenzar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/botonS_60x142.png"))); // NOI18N
         btncomenzar.setText("COMENZAR");
         btncomenzar.setBorderPainted(false);
         btncomenzar.setContentAreaFilled(false);
