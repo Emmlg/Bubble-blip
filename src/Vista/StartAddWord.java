@@ -132,7 +132,7 @@ public class StartAddWord extends javax.swing.JFrame {
                 btnañadirActionPerformed(evt);
             }
         });
-        getContentPane().add(btnañadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 280, -1, -1));
+        getContentPane().add(btnañadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 280, -1, -1));
 
         JLfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Inicio1137x650.png"))); // NOI18N
         getContentPane().add(JLfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 650));
